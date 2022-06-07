@@ -29,11 +29,9 @@ public class Arrow : Collidable
                 pushForce = pushForce
             };
             
+            coll.GetComponent<SpriteRenderer>().color = new Color(250, 0, 0);
+            
             coll.SendMessage("ReceiveDamage",dmg);
-            
-            Debug.Log(coll.name);
-
-            
         }
         
     }

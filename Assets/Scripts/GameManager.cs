@@ -3,10 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    
+    public List<Sprite> playerSprites;
+    public List<Sprite> weaponSprites;
+    public List<int> weaponPrices;
+    public List<int> xpTable;
+
+    public Player player;
+    
+    public static List<Vector3> doorsList;
+    public static List<GameObject> secret;
+
+    public int pesos;
+    public int experience;
+    
+    public bool secretBool = false;
 
     private void Awake()
     {
@@ -14,30 +30,37 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += LoadState;
     }
 
-    public List<Sprite> playerSprites;
-    public List<Sprite> weaponSprites;
-    public List<int> weaponPrices;
-    public List<int> xpTable;
-
-    public Player player;
-
-    public static List<GameObject> roomList;
-    
-    
-
-    //public FloatingTextManager floatingTextManager;
-
-    public int pesos;
-    public int experience;
 
 
-/**
-    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    public void Update()
     {
-        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
-    }
-**/
+        
+        
+        GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 
+        if (rooms.Length >= 15)
+        {
+            GameObject[] sps = GameObject.FindGameObjectsWithTag("SpawnPoint");
+            foreach (GameObject sp in sps)
+            {
+                Destroy(sp);
+            }
+        }
+        
+        
+        if (GameObject.FindGameObjectsWithTag("SpawnPoint").Length == 0&&!secretBool)
+        {
+            SecretRoomSpawn(secret[Random.Range(0, secret.Count - 1)]);
+            secretBool = true;
+        }
+    }
+
+    public void SecretRoomSpawn(GameObject secret)
+    {
+        Instantiate(GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>().specialRooms[0],secret.transform.position,
+            Quaternion.identity);
+    }
+    
     
     public void SaveState()
     {

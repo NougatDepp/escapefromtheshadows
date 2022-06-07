@@ -9,6 +9,9 @@ TagManager:
   - Rooms
   - Doors
   - Room
+  - Doorsy
+  - Doorsx
+  - SecretRoom
   layers:
   - Default
   - TransparentFX

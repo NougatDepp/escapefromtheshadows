@@ -16,7 +16,7 @@ public class RoomSpawner : MonoBehaviour
     private void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn",0.6f);
+        Invoke("Spawn",1f);
         
     }
 
@@ -39,9 +39,6 @@ public class RoomSpawner : MonoBehaviour
                 Instantiate(templates.leftDoorRooms[rand],transform.position,templates.leftDoorRooms[rand].transform.rotation);
             }
             spawned = true;
-
-            
-            
         }
     }
 

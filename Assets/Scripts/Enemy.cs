@@ -81,7 +81,9 @@ public class Enemy : Mover
             {
                 collidingWithPlayer = true;
             }
-
+            
+            
+            
             hits[i] = null;
         }
     }

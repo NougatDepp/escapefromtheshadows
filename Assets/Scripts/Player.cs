@@ -60,6 +60,7 @@ public class Player : Mover
         {
             gameObject.transform.position -= (gameObject.transform.position - Checkpoint).normalized/10;
             if (gameObject.transform.position.magnitude <= Checkpoint.magnitude+0.1f) anim.SetTrigger("Respawn");
+            GameObject.Find("Main Camera").transform.position = Vector3.zero;
         }
         else
         {

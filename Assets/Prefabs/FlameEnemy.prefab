@@ -128,12 +128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c481340f6d070464f99542f0e37482a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 1
-  maxHitpoint: 1
+  hitpoint: 3
+  maxHitpoint: 3
   pushRecoverySpeed: 0.2
   xpValue: 1
   triggerLength: 0.5
   chaseLength: 1
+  speed: 1
   filter:
     useTriggers: 0
     useLayerMask: 0

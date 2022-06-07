@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7360360012380516315}
   - component: {fileID: 6893177021234199161}
   m_Layer: 10
-  m_Name: arrow_beta_0 1
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,3 +162,5 @@ MonoBehaviour:
     maxNormalAngle: 0
   damagePoint: 1
   pushForce: 1
+  vanish: 1
+  vanishing: 0

@@ -140,11 +140,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walls_red_0
+      name: Walls_RED_0
       rect:
         serializedVersion: 2
-        x: 336
-        y: 383
+        x: 3
+        y: 534
         width: 64
         height: 64
       alignment: 0
@@ -161,11 +161,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_1
+      name: Walls_RED_1
       rect:
         serializedVersion: 2
-        x: 336
-        y: 319
+        x: 3
+        y: 470
         width: 64
         height: 64
       alignment: 0
@@ -182,11 +182,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_2
+      name: Walls_RED_6
       rect:
         serializedVersion: 2
-        x: 336
-        y: 255
+        x: 195
+        y: 534
         width: 64
         height: 64
       alignment: 0
@@ -203,11 +203,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_3
+      name: Walls_RED_door_2
       rect:
         serializedVersion: 2
-        x: 336
-        y: 191
+        x: 3
+        y: 274
         width: 64
         height: 64
       alignment: 0
@@ -224,11 +224,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_4
+      name: Walls_RED_door_3
       rect:
         serializedVersion: 2
-        x: 336
-        y: 127
+        x: 67
+        y: 274
         width: 64
         height: 64
       alignment: 0
@@ -245,11 +245,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_5
+      name: Walls_RED_2
       rect:
         serializedVersion: 2
-        x: 400
-        y: 383
+        x: 67
+        y: 534
         width: 64
         height: 64
       alignment: 0
@@ -266,11 +266,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_6
+      name: Walls_RED_3
       rect:
         serializedVersion: 2
-        x: 400
-        y: 319
+        x: 67
+        y: 470
         width: 64
         height: 64
       alignment: 0
@@ -287,11 +287,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_7
+      name: Walls_RED_7
       rect:
         serializedVersion: 2
-        x: 400
-        y: 255
+        x: 195
+        y: 470
         width: 64
         height: 64
       alignment: 0
@@ -308,11 +308,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_8
+      name: Walls_RED_door_5
       rect:
         serializedVersion: 2
-        x: 400
-        y: 191
+        x: 67
+        y: 338
         width: 64
         height: 64
       alignment: 0
@@ -329,11 +329,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_9
+      name: Walls_RED_door_1
       rect:
         serializedVersion: 2
-        x: 400
-        y: 127
+        x: 67
+        y: 210
         width: 64
         height: 64
       alignment: 0
@@ -350,11 +350,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_10
+      name: Walls_RED_4
       rect:
         serializedVersion: 2
-        x: 464
-        y: 383
+        x: 131
+        y: 534
         width: 64
         height: 64
       alignment: 0
@@ -371,11 +371,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_11
+      name: Walls_RED_5
       rect:
         serializedVersion: 2
-        x: 464
-        y: 319
+        x: 131
+        y: 470
         width: 64
         height: 64
       alignment: 0
@@ -392,11 +392,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_12
+      name: Walls_RED_door_0
       rect:
         serializedVersion: 2
-        x: 528
-        y: 383
+        x: 3
+        y: 210
         width: 64
         height: 64
       alignment: 0
@@ -413,11 +413,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_red_13
+      name: Walls_RED_door_4
       rect:
         serializedVersion: 2
-        x: 528
-        y: 319
+        x: 3
+        y: 338
         width: 64
         height: 64
       alignment: 0
@@ -433,6 +433,258 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Walls_RED_8
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dadeba9907da549aca7f79fb323b4d
+      internalID: 1196922620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_9
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9c46b3d7de2d64b909873bcde2cc77
+      internalID: -1652460574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_10
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004aad607d4513742903146efdb1fcd9
+      internalID: 438911226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_11
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92934a8ff9357f4ebe0ef6a2f7450f7
+      internalID: 1466356141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_12
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0fbd9b9fb6494479e063888d24a22c
+      internalID: 2072641509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_13
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8041d08d3a6d1418767fb12bfa682f
+      internalID: 1290966847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_14
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2daaabc86b2c024f9686b140a7f7b5e
+      internalID: 1389798975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_15
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4c81091757f354388afc4adfeddb10
+      internalID: -6572327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_16
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4325684c9b4438a40b825324b1d5b1d2
+      internalID: -2032140754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_17
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4911ccdb92e474c89940e911dd51fd
+      internalID: 109840739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_18
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cddce5dc0996d648a09dad889858448
+      internalID: 1648544191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_19
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 470
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983ede694c79c504892c461762de6762
+      internalID: -396725753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -444,20 +696,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walls_red_5: 222711709
-      Walls_red_3: 706817934
-      Walls_red_8: 303790892
-      Walls_red_0: 1865872521
-      Walls_red_1: 22064474
-      Walls_red_12: -1150752689
-      Walls_red_9: 1660915210
-      Walls_red_6: -1713639392
-      Walls_red_4: 272693279
-      Walls_red_2: -43408879
-      Walls_red_7: -958922907
-      Walls_red_10: 1958709944
-      Walls_red_13: -1493850722
-      Walls_red_11: 1956558192
+      Walls_RED_8: 303790892
+      Walls_RED_18: 109840739
+      Walls_RED_17: -2032140754
+      Walls_RED_14: 1290966847
+      Walls_RED_door_4: 756934674
+      Walls_RED_4: 1956558192
+      Walls_RED_15: 1389798975
+      Walls_RED_door_5: 1660915210
+      Walls_RED_12: 1466356141
+      Walls_RED_16: -6572327
+      Walls_RED_5: -1150752689
+      Walls_RED_7: 303790892
+      Walls_RED_13: 2072641509
+      Walls_RED_11: 438911226
+      Walls_RED_1: 22064474
+      Walls_RED_door_1: 1958709944
+      Walls_RED_door_3: 222711709
+      Walls_RED_door_2: 272693279
+      Walls_RED_door_0: -1493850722
+      Walls_RED_2: 22064474
+      Walls_RED_10: -1652460574
+      Walls_RED_9: 1196922620
+      Walls_RED_3: -958922907
+      Walls_RED_19: 1648544191
+      Walls_RED_0: 1865872521
+      Walls_RED_6: 706817934
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
