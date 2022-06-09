@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SecretSpawn : Collidable
 {
+    private int count;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
 

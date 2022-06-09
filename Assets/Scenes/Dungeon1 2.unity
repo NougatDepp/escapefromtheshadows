@@ -486,8 +486,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalDoors:
-  - {fileID: 5843120888880100181, guid: b4dca3833473fed4aad7ede6b8ac6816, type: 3}
-  - {fileID: 6174678947053955034, guid: c0944da9dd92c9c4287e8b6ae326944a, type: 3}
+  - {fileID: 1760648782337069039, guid: 1d3ce599d6bf0a74caeebf8d79138ccc, type: 3}
+  - {fileID: 4303623762282845331, guid: 7a7c624f6a8b8954595ef72470e95f47, type: 3}
+  - {fileID: 4573453404361897953, guid: 068c2c52df834c14cb01af73ca1a5bb1, type: 3}
+  - {fileID: 7688406312316018212, guid: adceacbf9c8794a459d17e30b3c7584a, type: 3}
   specialDoors: []
   walls:
   - {fileID: 4604852013806723691, guid: 2a386a04bedc04e4c8de72f68ea93aab, type: 3}

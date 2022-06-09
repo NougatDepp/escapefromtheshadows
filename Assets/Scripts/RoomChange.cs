@@ -18,17 +18,21 @@ public class RoomChange : Collidable
             GameManager.instance.SaveState();
             
             if (direction == 1) {
-                coll.transform.position -= new Vector3(0, 0.34f, 0);
-                CameraMotor.newPos -= new Vector3(0, 1.920012f/2, 0);
+                CameraMotor.newPos -= new Vector3(0, 1.920012f, 0);
+                new WaitForSecondsRealtime(1);
+                coll.transform.position -= new Vector3(0, 0.7f, 0);
             }else if (direction == 2){
-                coll.transform.position -= new Vector3(0.34f, 0, 0);
-                CameraMotor.newPos -= new Vector3(2.880018f/2, 0, 0);
+                CameraMotor.newPos -= new Vector3(2.880018f, 0, 0);
+                new WaitForSecondsRealtime(1);
+                coll.transform.position -= new Vector3(0.7f, 0, 0);
             }else if (direction == 3) {
-                coll.transform.position += new Vector3(0, 0.34f, 0);
-                CameraMotor.newPos += new Vector3(0, 1.920012f/2, 0);
+                CameraMotor.newPos += new Vector3(0, 1.920012f, 0);
+                new WaitForSecondsRealtime(1);
+                coll.transform.position += new Vector3(0, 0.7f, 0);
             }else if (direction == 4) {
-                coll.transform.position += new Vector3(0.34f, 0, 0);
-                CameraMotor.newPos +=  new Vector3(2.880018f/2, 0, 0);
+                CameraMotor.newPos +=  new Vector3(2.880018f, 0, 0);
+                new WaitForSecondsRealtime(1);
+                coll.transform.position += new Vector3(0.7f, 0, 0);
             }
         }
     }

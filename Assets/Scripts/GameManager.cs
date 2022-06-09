@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     
     public static List<Vector3> doorsList;
-    public static List<GameObject> secret;
+    //public static List<GameObject> secret;
 
     public int pesos;
     public int experience;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        
+        GameObject[] secret = GameObject.FindGameObjectsWithTag("SecretRoom");
         
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         
         if (GameObject.FindGameObjectsWithTag("SpawnPoint").Length == 0&&!secretBool)
         {
-            SecretRoomSpawn(secret[Random.Range(0, secret.Count - 1)]);
+            SecretRoomSpawn(secret[Random.Range(0, secret.Length - 1)]);
             secretBool = true;
         }
     }

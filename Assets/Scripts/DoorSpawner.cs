@@ -17,13 +17,21 @@ public class DoorSpawner : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Doorsx"))
+        if (other.CompareTag("DoorT"))
         {
             Instantiate(temps.normalDoors[0], transform.position, Quaternion.identity);
             Destroy(gameObject);
-        }else if(other.CompareTag("Doorsy"))
+        }else if(other.CompareTag("DoorR"))
         {
             Instantiate(temps.normalDoors[1], transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }else if(other.CompareTag("DoorB"))
+        {
+            Instantiate(temps.normalDoors[2], transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }else if(other.CompareTag("DoorL"))
+        {
+            Instantiate(temps.normalDoors[3], transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
