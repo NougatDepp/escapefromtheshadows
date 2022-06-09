@@ -19,19 +19,23 @@ public class DoorSpawner : MonoBehaviour
     {
         if (other.CompareTag("DoorT"))
         {
-            Instantiate(temps.normalDoors[0], transform.position, Quaternion.identity);
+            var door = Instantiate(temps.normalDoors[0], transform.position, Quaternion.identity);
+            door.transform.parent = gameObject.transform.parent;
             Destroy(gameObject);
         }else if(other.CompareTag("DoorR"))
         {
-            Instantiate(temps.normalDoors[1], transform.position, Quaternion.identity);
+            var door = Instantiate(temps.normalDoors[1], transform.position, Quaternion.identity);
+            door.transform.parent = gameObject.transform.parent;
             Destroy(gameObject);
         }else if(other.CompareTag("DoorB"))
         {
-            Instantiate(temps.normalDoors[2], transform.position, Quaternion.identity);
+            var door = Instantiate(temps.normalDoors[2], transform.position, Quaternion.identity);
+            door.transform.parent = gameObject.transform.parent;
             Destroy(gameObject);
         }else if(other.CompareTag("DoorL"))
         {
-            Instantiate(temps.normalDoors[3], transform.position, Quaternion.identity);
+            var door = Instantiate(temps.normalDoors[3], transform.position, Quaternion.identity);
+            door.transform.parent = gameObject.transform.parent;
             Destroy(gameObject);
         }
     }

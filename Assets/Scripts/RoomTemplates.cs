@@ -9,6 +9,4 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] leftDoorRooms;
     public GameObject[] rightDoorRooms;
     public GameObject[] specialRooms;
-
-
 }

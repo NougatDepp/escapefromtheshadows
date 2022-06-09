@@ -31,7 +31,7 @@ public class RoomChange : Collidable
                 coll.transform.position += new Vector3(0, 0.7f, 0);
             }else if (direction == 4) {
                 CameraMotor.newPos +=  new Vector3(2.880018f, 0, 0);
-                new WaitForSecondsRealtime(1);
+                
                 coll.transform.position += new Vector3(0.7f, 0, 0);
             }
         }

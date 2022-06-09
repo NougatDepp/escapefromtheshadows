@@ -16,6 +16,7 @@ TagManager:
   - DoorR
   - DoorB
   - DoorL
+  - Grids
   layers:
   - Default
   - TransparentFX
