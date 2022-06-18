@@ -16,7 +16,7 @@ public class RoomSpawner : MonoBehaviour
     private void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn",1f);
+        Invoke("Spawn",0.1f);
         
     }
 
@@ -27,16 +27,20 @@ public class RoomSpawner : MonoBehaviour
             if (openingDirection == 3)
             {
                 rand = Random.Range(0, templates.topDoorRooms.Length - 1);
-                Instantiate(templates.topDoorRooms[rand],transform.position,templates.topDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.topDoorRooms[rand],transform.position,templates.topDoorRooms[rand].transform.rotation);
+                room.transform.parent = gameObject.transform.parent;
             }else if (openingDirection == 4) {
                 rand = Random.Range(0, templates.rightDoorRooms.Length - 1);
-                Instantiate(templates.rightDoorRooms[rand],transform.position,templates.rightDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.rightDoorRooms[rand],transform.position,templates.rightDoorRooms[rand].transform.rotation);
+                room.transform.parent = gameObject.transform.parent;
             }else if (openingDirection == 1) {
                 rand = Random.Range(0, templates.bottomDoorRooms.Length - 1);
-                Instantiate(templates.bottomDoorRooms[rand],transform.position,templates.bottomDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.bottomDoorRooms[rand],transform.position,templates.bottomDoorRooms[rand].transform.rotation);
+                room.transform.parent = gameObject.transform.parent;
             }else if (openingDirection == 2) {
                 rand = Random.Range(0, templates.leftDoorRooms.Length - 1);
-                Instantiate(templates.leftDoorRooms[rand],transform.position,templates.leftDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.leftDoorRooms[rand],transform.position,templates.leftDoorRooms[rand].transform.rotation);
+                room.transform.parent = gameObject.transform.parent;
             }
             spawned = true;
         }

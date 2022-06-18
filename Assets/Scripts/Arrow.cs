@@ -10,16 +10,13 @@ public class Arrow : Collidable
 {
     public int damagePoint = 1;
     public float pushForce = 1;
-
-    public float vanish = 1;
-    public bool vanishing = false;
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.tag == "Fighter")
         {
             if(coll.name == "Player")
             {
-                return;
+                
             }
 
             Damage dmg = new Damage()
@@ -28,12 +25,7 @@ public class Arrow : Collidable
                 origin = transform.position,
                 pushForce = pushForce
             };
-            
-            coll.GetComponent<SpriteRenderer>().color = new Color(250, 0, 0);
-            
-            coll.SendMessage("ReceiveDamage",dmg);
         }
-        
     }
 
     private void FixedUpdate()
@@ -41,6 +33,4 @@ public class Arrow : Collidable
         if (GetComponent<Rigidbody2D>().velocity.magnitude < 3) GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 0.02f);
         if (GetComponent<SpriteRenderer>().color.a <= 0) Destroy(gameObject);
     }
-    
-    
 }

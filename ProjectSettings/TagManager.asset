@@ -17,6 +17,10 @@ TagManager:
   - DoorB
   - DoorL
   - Grids
+  - Breakable
+  - Bomb
+  - BossRoom
+  - TreasureRoom
   layers:
   - Default
   - TransparentFX
@@ -29,7 +33,7 @@ TagManager:
   - Blocking
   - Actor
   - Arrow
-  - 
+  - Bomb
   - 
   - 
   - 

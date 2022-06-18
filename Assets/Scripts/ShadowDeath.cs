@@ -19,7 +19,7 @@ public class ShadowDeath : MonoBehaviour
             if (Physics2D.Raycast(transform.position, (playerTransform.position - transform.position).normalized, vecLength,
                                 768).collider.name == "Player")
             {
-                Player.darkness -= 0.013f;
+                GameManager.instance.darkness -= 0.001f;
                 Camera.main.transform.position = Camera.main.transform.position + Random.onUnitSphere/300;
             }
 
@@ -30,7 +30,6 @@ public class ShadowDeath : MonoBehaviour
         else
         {
             Debug.DrawRay(transform.position, (playerTransform.position-transform.position).normalized * vecLength, Color.white, 0);
-            
         }
     }
 }

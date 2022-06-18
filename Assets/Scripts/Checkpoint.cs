@@ -11,7 +11,7 @@ public class Checkpoint : Collidable
         {
             //Save Location
             GameManager.instance.SaveState();
-            Player.Checkpoint = GameObject.Find("Player").transform.position;
+            GameManager.instance.Checkpoint = GameObject.Find("Player").transform.position;
         }
     }
 }

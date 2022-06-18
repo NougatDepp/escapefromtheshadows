@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -8,6 +9,6 @@ public class RoomMid : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("SpawnPoint")) Destroy(other.gameObject);
-        if(other.CompareTag("SecretRoom")) Destroy(other.gameObject);
+        if(other.CompareTag("SpecialRoom")) Destroy(other.gameObject);
     }
 }

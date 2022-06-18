@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GridSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    static void 
+    static void Spawn(int grid)
+    {
+        
+    }
 }

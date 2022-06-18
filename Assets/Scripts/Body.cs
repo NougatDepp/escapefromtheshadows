@@ -15,7 +15,7 @@ public class Body : MonoBehaviour
 
     private void Update()
     {
-        if (Player.moving)
+        if (GameManager.instance.moving)
         {
             anim.SetBool("Walk",true);
         }

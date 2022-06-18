@@ -685,6 +685,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Walls_RED_Secret_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 167
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863d6df6ee81fed42a436ef295ec93c5
+      internalID: -12131579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_Secret_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 167
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec96791ca2ba554182f47e3f95babbd
+      internalID: -730853310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_Secret_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 103
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0958bae2f34cff4babf5c4b03805241
+      internalID: 2032986025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_Secret_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 103
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3063edc8750e7c041a5a36ee1e32b749
+      internalID: 34622524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_Secret_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 39
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e920e5da034b1454ba63729deb07e16b
+      internalID: 1160201263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_RED_Secret_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 39
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cb8faf41c17614b8069fc061e133fb
+      internalID: 1609641677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -699,6 +825,7 @@ TextureImporter:
       Walls_RED_8: 303790892
       Walls_RED_18: 109840739
       Walls_RED_17: -2032140754
+      Walls_RED_Secret_5: 1609641677
       Walls_RED_14: 1290966847
       Walls_RED_door_4: 756934674
       Walls_RED_4: 1956558192
@@ -710,18 +837,23 @@ TextureImporter:
       Walls_RED_7: 303790892
       Walls_RED_13: 2072641509
       Walls_RED_11: 438911226
+      Walls_RED_Secret_3: 34622524
+      Walls_RED_Secret_0: -12131579
       Walls_RED_1: 22064474
       Walls_RED_door_1: 1958709944
       Walls_RED_door_3: 222711709
+      Walls_RED_Secret_2: 2032986025
       Walls_RED_door_2: 272693279
       Walls_RED_door_0: -1493850722
       Walls_RED_2: 22064474
+      Walls_RED_Secret_4: 1160201263
       Walls_RED_10: -1652460574
       Walls_RED_9: 1196922620
       Walls_RED_3: -958922907
       Walls_RED_19: 1648544191
       Walls_RED_0: 1865872521
       Walls_RED_6: 706817934
+      Walls_RED_Secret_1: -730853310
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

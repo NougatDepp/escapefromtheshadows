@@ -8,33 +8,40 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
-    public List<Sprite> playerSprites;
-    public List<Sprite> weaponSprites;
-    public List<int> weaponPrices;
-    public List<int> xpTable;
+
+    private GridTemplates temps;
 
     public Player player;
     
     public static List<Vector3> doorsList;
-    //public static List<GameObject> secret;
 
     public int pesos;
     public int experience;
     
-    public bool secretBool = false;
+    
+    public float darkness = 1f;
+    public int hearts = 3;
+    public int lives = 3;
+    public Vector3 Checkpoint;
+    public bool moving = false;
+    
+    
+    
+    
+    
+    public bool lastBool = false;
 
     private void Awake()
     {
         instance = this;
         SceneManager.sceneLoaded += LoadState;
     }
-
-
-
+    
     public void Update()
     {
-        GameObject[] secret = GameObject.FindGameObjectsWithTag("SecretRoom");
+        GameObject[] secret = GameObject.FindGameObjectsWithTag("SpecialRoom");
+        
+        
         
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 
@@ -48,11 +55,30 @@ public class GameManager : MonoBehaviour
         }
         
         
-        if (GameObject.FindGameObjectsWithTag("SpawnPoint").Length == 0&&!secretBool)
+        
+        
+        
+        
+        
+        
+        if (GameObject.FindGameObjectsWithTag("SpawnPoint").Length == 0&&!lastBool)
         {
             SecretRoomSpawn(secret[Random.Range(0, secret.Length - 1)]);
-            secretBool = true;
+
+            temps = GameObject.FindGameObjectWithTag("Grids").GetComponent<GridTemplates>();
+            
+            foreach (var room in rooms)
+            {
+                var grid = Instantiate(temps.normalGridsA[Random.Range(0, temps.normalGridsA.Length - 1)], room.transform.position,
+                    Quaternion.identity);
+                grid.transform.parent = room.gameObject.transform.parent;
+            }
+            
+            lastBool = true;
+
+            this.enabled = false;
         }
+        Debug.Log(1);
     }
 
     public void SecretRoomSpawn(GameObject secret)
