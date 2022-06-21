@@ -21,6 +21,9 @@ TagManager:
   - Bomb
   - BossRoom
   - TreasureRoom
+  - SpecialRoom
+  - Secret
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -34,7 +37,7 @@ TagManager:
   - Actor
   - Arrow
   - Bomb
-  - 
+  - Fireball
   - 
   - 
   - 

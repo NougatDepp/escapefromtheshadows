@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5888457550453764788}
   - component: {fileID: 5888457550453764810}
   - component: {fileID: 5888457550453764789}
-  - component: {fileID: 8347250559747701512}
   m_Layer: 0
   m_Name: RoomMid
   m_TagString: Untagged
@@ -94,15 +93,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8347250559747701512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888457550453764808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16af2017c06f679409b5a735d1073543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

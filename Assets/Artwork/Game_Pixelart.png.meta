@@ -334,7 +334,7 @@ TextureImporter:
         width: 6
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -342,6 +342,48 @@ TextureImporter:
       bones: []
       spriteID: 8c1bf9be25ddfcb41a30d35fc0a44b67
       internalID: 471972347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: megaknight_0
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e759f4196b30547a8884a7ea5c4e35
+      internalID: -21913535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: static_shooter_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a02c34a9bf1f364e8acace3f2a1d8d7
+      internalID: -1489841650
       vertices: []
       indices: 
       edges: []
@@ -361,12 +403,14 @@ TextureImporter:
       flame_4: 1996027945
       arrow_beta_0: 471972347
       player_back: -1025647565
+      static_shooter_1: -1489841650
       bow_0: 1813694491
       enemy_0: 372685960
       flame_2: 524390688
       flame_5: -322748405
       flame_3: -568123919
       flame_1: -199894599
+      megaknight_0: -21913535
       flame_0: -1996697224
   spritePackingTag: 
   pSDRemoveMatte: 0

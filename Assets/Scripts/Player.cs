@@ -31,7 +31,7 @@ public class Player : Mover
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        if (!dead) PlayerMotor(new Vector3(x,y,0).normalized);
+        if (!dead) Mover(x,y);
 
         anim.SetInteger("Hearts",GameManager.instance.hearts);
 
@@ -53,6 +53,11 @@ public class Player : Mover
         if(Random.Range(1,300) == 50) anim.SetTrigger("Blink");
     }
 
+    public void Mover(float x, float y)
+    {
+        PlayerMotor(new Vector3(x,y,0).normalized);
+    }
+    
     public void DeadOn()
     {
         dead = true;

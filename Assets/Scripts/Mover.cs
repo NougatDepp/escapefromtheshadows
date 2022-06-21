@@ -14,12 +14,11 @@ public abstract class Mover : Fighter
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    protected virtual void UpdateMotor(Vector3 input)
+    protected virtual void UpdateMotor(Vector3 input,float change)
     {
 
-        moveDelta = Vector3.Lerp(moveDelta, input, 0.6f);
+        moveDelta = Vector3.Lerp(moveDelta, input, change*0.6f);
 
-        // Add push Vector, if any
         moveDelta += pushDirection;
         
         //Reduce pushforce every frame

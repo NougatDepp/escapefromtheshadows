@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bow : MonoBehaviour
@@ -8,8 +10,9 @@ public class Bow : MonoBehaviour
     public GameObject arrow;
     public float launchForce;
     public Transform shotPoint;
-    public float cooldown;
     
+    public float cooldown;
+    static float lastShot;
     
     private Transform playerTransform;
 
@@ -36,19 +39,28 @@ public class Bow : MonoBehaviour
 
         anim.SetFloat("Distance",direction.magnitude);
 
-        if (Input.GetMouseButton(0)&&cooldown > 1)
+        if (Input.GetMouseButton(0))
         {
             Shoot();
-            cooldown = 0;
         }
-
-        cooldown += 0.05f;
     }
 
     void Shoot()
     {
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
-        newArrow.GetComponent<Rigidbody2D>().velocity = transform.right *launchForce;
+        if (Time.time - lastShot < cooldown)
+        {
+            return;
+        }
+        
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,30));
+        newArrow.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, 30) * transform.right*launchForce; 
+        
+        GameObject newArrow2 = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,0));
+        newArrow2.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, 0) * transform.right*launchForce; 
+        
+        GameObject newArrow3 = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,-30));
+        newArrow3.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, -30) * transform.right*launchForce; 
+        lastShot = Time.time;
 
     }
     

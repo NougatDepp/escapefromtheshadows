@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -18,17 +19,14 @@ public class GameManager : MonoBehaviour
     public int pesos;
     public int experience;
     
+    GameObject[] secret;
     
     public float darkness = 1f;
     public int hearts = 3;
     public int lives = 3;
     public Vector3 Checkpoint;
     public bool moving = false;
-    
-    
-    
-    
-    
+
     public bool lastBool = false;
 
     private void Awake()
@@ -39,10 +37,6 @@ public class GameManager : MonoBehaviour
     
     public void Update()
     {
-        GameObject[] secret = GameObject.FindGameObjectsWithTag("SpecialRoom");
-        
-        
-        
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Room");
 
         if (rooms.Length >= 15)
@@ -54,16 +48,20 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        
-        
-        
-        
-        
-        
-        
         if (GameObject.FindGameObjectsWithTag("SpawnPoint").Length == 0&&!lastBool)
         {
+            GameObject[] special = GameObject.FindGameObjectsWithTag("SpecialRoom");
+
+            int i = Random.Range(0, special.Length - 1);
+            
+            TreasureRoomSpawn(special[i]);
+
+            GameObject[] secret = GameObject.FindGameObjectsWithTag("Secret");
+            
             SecretRoomSpawn(secret[Random.Range(0, secret.Length - 1)]);
+
+            BossRoomSpawn(special[(i+3)%(special.Length-1)]);
+            
 
             temps = GameObject.FindGameObjectWithTag("Grids").GetComponent<GridTemplates>();
             
@@ -75,15 +73,24 @@ public class GameManager : MonoBehaviour
             }
             
             lastBool = true;
-
-            this.enabled = false;
         }
-        Debug.Log(1);
     }
 
     public void SecretRoomSpawn(GameObject secret)
     {
         Instantiate(GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>().specialRooms[0],secret.transform.position,
+            Quaternion.identity);
+    }
+
+    public void TreasureRoomSpawn(GameObject treasure)
+    {
+        Instantiate(GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>().specialRooms[1],treasure.transform.position,
+            Quaternion.identity);
+    }
+    
+    public void BossRoomSpawn(GameObject boss)
+    {
+        Instantiate(GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>().specialRooms[2],boss.transform.position,
             Quaternion.identity);
     }
     

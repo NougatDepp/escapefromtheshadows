@@ -21,14 +21,22 @@ public class Bomb : Collidable
         
         if (coll.tag == "Fighter")
         {
-            
+            Damage dmg = new Damage()
+            {
+                damageAmount = damagePoint,
+                origin = transform.position,
+                pushForce = pushForce
+            };
+            coll.SendMessage("ReceiveDamage",dmg);
         }
         else
         {
-            Debug.Log(coll.tag);
+            
+            
             if (coll.CompareTag("Breakable")) Destroy(coll.gameObject);
+            
         }
-
+        
         
     }
 
