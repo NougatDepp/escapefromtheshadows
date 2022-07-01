@@ -20,27 +20,61 @@ public class RoomSpawner : MonoBehaviour
         
     }
 
-    private void Spawn()
+    private void Spawn2()
     {
         if (spawned == false)
         {
             if (openingDirection == 3)
             {
                 rand = Random.Range(0, templates.topDoorRooms.Length - 1);
-                var room = Instantiate(templates.topDoorRooms[rand],transform.position,templates.topDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.topDoorRooms[rand],transform.position,Quaternion.identity);
                 room.transform.parent = gameObject.transform.parent;
             }else if (openingDirection == 4) {
                 rand = Random.Range(0, templates.rightDoorRooms.Length - 1);
-                var room = Instantiate(templates.rightDoorRooms[rand],transform.position,templates.rightDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.rightDoorRooms[rand],transform.position,Quaternion.identity);
                 room.transform.parent = gameObject.transform.parent;
             }else if (openingDirection == 1) {
                 rand = Random.Range(0, templates.bottomDoorRooms.Length - 1);
-                var room = Instantiate(templates.bottomDoorRooms[rand],transform.position,templates.bottomDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.bottomDoorRooms[rand],transform.position,Quaternion.identity);
                 room.transform.parent = gameObject.transform.parent;
             }else if (openingDirection == 2) {
                 rand = Random.Range(0, templates.leftDoorRooms.Length - 1);
-                var room = Instantiate(templates.leftDoorRooms[rand],transform.position,templates.leftDoorRooms[rand].transform.rotation);
+                var room = Instantiate(templates.leftDoorRooms[rand],transform.position,Quaternion.identity);
                 room.transform.parent = gameObject.transform.parent;
+            }
+            spawned = true;
+        }
+    }
+
+    private void Spawn()
+    {
+        if (spawned == false)
+        {
+
+            if (openingDirection == 3 && GameManager.instance.b < Random.Range(0.0f,1.0f))
+            {
+                rand = Random.Range(0, templates.topDoorRooms.Length - 1);
+                var room = Instantiate(templates.roomA,transform.position,Quaternion.identity);
+                room.transform.parent = GameObject.FindGameObjectWithTag("Rooms").transform;
+                
+            }else if (openingDirection == 4 && GameManager.instance.l < Random.Range(0.0f,1.0f)) {
+                
+                rand = Random.Range(0, templates.rightDoorRooms.Length - 1);
+                var room = Instantiate(templates.roomA,transform.position,Quaternion.identity);
+                room.transform.parent = GameObject.FindGameObjectWithTag("Rooms").transform;
+                
+            }else if (openingDirection == 1 && GameManager.instance.t < Random.Range(0.0f,1.0f)) {
+                
+                rand = Random.Range(0, templates.bottomDoorRooms.Length - 1);
+                var room = Instantiate(templates.roomA,transform.position,Quaternion.identity);
+                room.transform.parent = GameObject.FindGameObjectWithTag("Rooms").transform;
+                
+            }else if (openingDirection == 2 && GameManager.instance.r < Random.Range(0.0f,1.0f)) {
+                
+                rand = Random.Range(0, templates.leftDoorRooms.Length - 1);
+                var room = Instantiate(templates.roomA,transform.position,Quaternion.identity);
+                room.transform.parent = GameObject.FindGameObjectWithTag("Rooms").transform;
+                
             }
             spawned = true;
         }

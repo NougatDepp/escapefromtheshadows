@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8465643208387757915}
   - component: {fileID: 981584558395126108}
   - component: {fileID: -7128912013134106976}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Stone
   m_TagString: Breakable
   m_Icon: {fileID: 0}
@@ -168,4 +168,4 @@ MonoBehaviour:
   - {x: -0.062147856, y: -0.08382946, z: -0.0000000055879354}
   m_ShapePathHash: -1550884875
   m_Mesh: {fileID: 0}
-  m_InstanceId: 102092
+  m_InstanceId: 189354

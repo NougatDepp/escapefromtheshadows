@@ -870,4 +870,4 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   damagePoint: 1
-  pushForce: 0.5
+  pushForce: 0.2

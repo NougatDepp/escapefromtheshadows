@@ -9,20 +9,27 @@ using Random = UnityEngine.Random;
 
 public class Player : Mover
 {
-
-    
     public bool dead = false;
+    public int damage = 1;
 
+    public GameObject deathMenuUi;
+    public GameObject winMenuUi;
+    
+    public HealthBarScript healthBar;
+    
     private SpriteRenderer spriteRenderer;
     private Animator anim;
-
-
+    
     protected override void Start()
     {
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         GameManager.instance.Checkpoint = transform.position;
+        PlayerPrefs.GetFloat("diff");
+        immuneTime = 2f;
+        
+        healthBar.SetMaxHealth(maxHitpoint);
         
     }
     
@@ -33,17 +40,13 @@ public class Player : Mover
 
         if (!dead) Mover(x,y);
 
-        anim.SetInteger("Hearts",GameManager.instance.hearts);
-
-        if (GameManager.instance.darkness <= 0)
-        {
-            GameManager.instance.hearts -= 1;
-            GameManager.instance.darkness = 1f;
-        }
+        healthBar.SetHealth(hitpoint);
+        
+        anim.SetFloat("Hitpoints",hitpoint);
 
         if (x != 0 || y != 0)
         {
-            GameManager.instance.moving = true;
+            if(!dead)GameManager.instance.moving = true;
         }
         else
         {
@@ -51,6 +54,24 @@ public class Player : Mover
         }
         
         if(Random.Range(1,300) == 50) anim.SetTrigger("Blink");
+        
+        if(hitpoint <= 0)DeadOn();
+        
+        var colorvar = gameObject.GetComponent<SpriteRenderer>().color;
+
+        if (Time.time - lastImmune > immuneTime)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(colorvar.r, colorvar.g, colorvar.b, 1f);
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(colorvar.r, colorvar.g, colorvar.b, 0.3f);
+        }
+    }
+
+    public void Spawn()
+    {
+        
     }
 
     public void Mover(float x, float y)
@@ -68,6 +89,18 @@ public class Player : Mover
         dead = false;
     }
 
+    public void DeathScreen()
+    {
+        Time.timeScale = 0;
+        deathMenuUi.SetActive(true);
+    }
+
+    public void WinScreen()
+    {
+        Time.timeScale = 0;
+        winMenuUi.SetActive(true);
+    }
+    
     public void Freeze()
     {
         this.enabled = false;

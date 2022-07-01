@@ -24,7 +24,7 @@ public class EnemyOne : Mover
     public Transform shotPoint;
     
     public float cooldown;
-    static float lastShot;
+    public float lastShot;
     
 
     protected override void Start()
@@ -32,6 +32,7 @@ public class EnemyOne : Mover
         base.Start();
         playerTransform = FindObjectOfType<GameManager>().player.transform;
         startingPosition = transform.position;
+        enabled = false;
     }
     
     void OnBecameVisible()
@@ -52,7 +53,7 @@ public class EnemyOne : Mover
 
         if (!collidingWithPlayer)
         {
-            UpdateMotor((playerTransform.position-transform.position).normalized*speed,change);
+            FloatUpdateMotor((playerTransform.position-transform.position).normalized*speed,change);
         }
             
         collidingWithPlayer = false;
@@ -88,6 +89,7 @@ public class EnemyOne : Mover
     
     protected override void Death()
     {
+        GameManager.instance.player.damage += 1;
         Destroy(gameObject);
     }
     

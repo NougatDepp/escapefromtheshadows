@@ -27,6 +27,7 @@ public class Enemy : Mover
         base.Start();
         playerTransform = FindObjectOfType<GameManager>().player.transform;
         startingPosition = transform.position;
+        enabled = false;
     }
     
     void OnBecameVisible()
@@ -68,6 +69,7 @@ public class Enemy : Mover
 
     protected override void Death()
     {
+        GameManager.instance.player.damage += 1;
         Destroy(gameObject);
     }
     

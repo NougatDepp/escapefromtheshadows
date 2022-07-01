@@ -60,6 +60,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  count: 1
 --- !u!61 &4293110567427393477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,6 +168,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  count: 1
 --- !u!61 &7052497351276243685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -228,7 +230,7 @@ GameObject:
   - component: {fileID: 8293725439256089478}
   m_Layer: 0
   m_Name: SL
-  m_TagString: SpecialRoom
+  m_TagString: Treasure
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,6 +276,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  count: 1
 --- !u!61 &7123027822973132045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -335,7 +338,7 @@ GameObject:
   - component: {fileID: 5083828588568353028}
   m_Layer: 0
   m_Name: SR
-  m_TagString: SpecialRoom
+  m_TagString: Boss
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +384,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  count: 1
 --- !u!61 &3008239053759948091
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,13 +13,15 @@ public class ShadowDeath : MonoBehaviour
     
     void Update()
     {
-        if (Physics2D.Raycast(transform.position, (playerTransform.position-transform.position).normalized, vecLength,768))
+        if (PauseMenu.GameIsPaused == true) return;
+        
+        if (Physics2D.Raycast(transform.position, (playerTransform.position-transform.position).normalized, vecLength,640))
         {
             
             if (Physics2D.Raycast(transform.position, (playerTransform.position - transform.position).normalized, vecLength,
-                                768).collider.name == "Player")
+                                640).collider.name == "Player")
             {
-                GameManager.instance.darkness -= 0.001f;
+                GameManager.instance.player.hitpoint -= 0.001f;
                 Camera.main.transform.position = Camera.main.transform.position + Random.onUnitSphere/300;
             }
 

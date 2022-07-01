@@ -52,16 +52,19 @@ public class Bow : MonoBehaviour
             return;
         }
         
-        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,30));
-        newArrow.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, 30) * transform.right*launchForce; 
-        
+        Vector3 playerSpeed = Vector3.one;
         GameObject newArrow2 = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,0));
         newArrow2.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, 0) * transform.right*launchForce; 
         
+        /**
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,30));
+        newArrow.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, 30) * transform.right*launchForce + playerSpeed/2; 
+        
         GameObject newArrow3 = Instantiate(arrow, shotPoint.position, shotPoint.rotation*Quaternion.Euler(0,0f,-30));
-        newArrow3.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, -30) * transform.right*launchForce; 
-        lastShot = Time.time;
+        newArrow3.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0, 0, -30) * transform.right*launchForce + playerSpeed/2; **/
 
+
+        lastShot = Time.time;
     }
     
 }

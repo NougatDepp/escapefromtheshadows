@@ -8,12 +8,14 @@ using UnityEngine;
 
 public class Arrow : Collidable
 {
-    public int damagePoint = 1;
+    public int damagePoint;
     public float pushForce = 1;
+
     protected override void OnCollide(Collider2D coll)
     {
+        damagePoint = GameManager.instance.player.damage;
         
-        if (coll.tag == "Fighter")
+        if (coll.tag == "Enemy")
         {
             if(coll.name == "Player")
             {

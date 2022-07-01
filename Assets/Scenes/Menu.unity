@@ -344,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30661219}
   - component: {fileID: 30661220}
+  - component: {fileID: 30661221}
   m_Layer: 5
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -425,10 +426,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8383245399429620019}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: set_volume
-        m_Mode: 0
+      - m_Target: {fileID: 30661221}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -437,6 +438,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &30661221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30661218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbb8593e430d4449ad0850367261227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 30661220}
 --- !u!1 &224196491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,8 +1244,8 @@ RectTransform:
   m_GameObject: {fileID: 546665649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.95, y: 1.95, z: 1.95}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 703638895}
   - {fileID: 1499294701}
@@ -1269,6 +1283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560428466}
   - component: {fileID: 560428468}
+  - component: {fileID: 560428469}
   m_Layer: 5
   m_Name: EnemyDifficultySlider
   m_TagString: Untagged
@@ -1350,10 +1365,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 6d11b1778b392a642a23094874108b1d, type: 3}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 560428469}
+        m_TargetAssemblyTypeName: DiffManager, Assembly-CSharp
+        m_MethodName: ChangeDiff
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1362,6 +1377,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &560428469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560428465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb3c32af390064419833b4a568e8ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diffSlider: {fileID: 560428468}
 --- !u!1 &590480801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,16 +2330,16 @@ RectTransform:
   m_GameObject: {fileID: 1328003690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.21, y: 1.21, z: 1.21}
+  m_LocalScale: {x: 2.15, y: 2.15, z: 2.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1414161954}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000023922, y: -0.0000076294}
-  m_SizeDelta: {x: 1220.2, y: 792.7766}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1339.8, y: -647.2234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328003692
 MonoBehaviour:
@@ -2512,7 +2540,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1328003691}
   m_Father: {fileID: 1544798307}
@@ -2647,12 +2675,12 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 1
   m_MaxValue: 3
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 6d11b1778b392a642a23094874108b1d, type: 3}
+      - m_Target: {fileID: 11500000, guid: e27231ef1839c624d9c65868b46b0ebc, type: 3}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: 
         m_Mode: 0
@@ -2847,10 +2875,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 0.72
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

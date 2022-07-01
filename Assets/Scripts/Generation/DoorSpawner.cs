@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -40,6 +41,15 @@ public class DoorSpawner : MonoBehaviour
             roomString = "normal";
         }
 
+        if (other.CompareTag("DoorB")) gameObject.transform.parent.parent.name = gameObject.transform.parent.parent.name +"T";
+        if (other.CompareTag("DoorL")) gameObject.transform.parent.parent.name = gameObject.transform.parent.parent.name +"R";
+        if (other.CompareTag("DoorT")) gameObject.transform.parent.parent.name = gameObject.transform.parent.parent.name +"B";
+        if (other.CompareTag("DoorR")) gameObject.transform.parent.parent.name = gameObject.transform.parent.parent.name +"L";
+        
+        
+        
+        
+        
         if (roomString.Equals("secret")) 
         {
             
@@ -142,7 +152,5 @@ public class DoorSpawner : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
-        
     }
 }

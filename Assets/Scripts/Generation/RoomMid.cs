@@ -11,5 +11,8 @@ public class RoomMid : MonoBehaviour
         if(other.CompareTag("SpawnPoint")) Destroy(other.gameObject);
         if(other.CompareTag("SpecialRoom")) Destroy(other.gameObject);
         if(other.CompareTag("Secret")) Destroy(other.gameObject);
+        if(other.CompareTag("Boss")) Destroy(other.gameObject);
+        if(other.CompareTag("Treasure")) Destroy(other.gameObject);
+        
     }
 }

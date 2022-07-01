@@ -11,7 +11,6 @@ public class ItemPedestal : Collidable
     {
         base.Start();
         startingPosition = transform.position;
-        Debug.Log(startingPosition);
         playerTransform = GameManager.instance.player.transform;
     }
 

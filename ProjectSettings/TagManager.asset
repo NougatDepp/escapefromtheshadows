@@ -24,6 +24,9 @@ TagManager:
   - SpecialRoom
   - Secret
   - Enemy
+  - Boss
+  - Treasure
+  - WinMenu
   layers:
   - Default
   - TransparentFX
@@ -32,7 +35,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Blocker
   - Blocking
   - Actor
   - Arrow

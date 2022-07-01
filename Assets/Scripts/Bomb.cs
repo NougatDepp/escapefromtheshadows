@@ -19,7 +19,7 @@ public class Bomb : Collidable
     protected override void OnCollide(Collider2D coll)
     {
         
-        if (coll.tag == "Fighter")
+        if (coll.tag == "Enemy"|| coll.tag == "Fighter")
         {
             Damage dmg = new Damage()
             {
@@ -31,10 +31,7 @@ public class Bomb : Collidable
         }
         else
         {
-            
-            
             if (coll.CompareTag("Breakable")) Destroy(coll.gameObject);
-            
         }
         
         

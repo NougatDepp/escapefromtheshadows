@@ -6,28 +6,32 @@ using UnityEngine;
 public class Fighter : MonoBehaviour
 {
     //Public Fields
-    public int hitpoint = 10;
+    public float hitpoint = 10;
     public int maxHitpoint = 10;
     public float pushRecoverySpeed = 0.2f;
     
     //Immunity
-    protected float immuneTime = 0;
+    protected float immuneTime = 0.1f;
     protected float lastImmune;
 
     protected Vector3 pushDirection;
 
     protected virtual void ReceiveDamage(Damage dmg)
     {
-
-        lastImmune = Time.time; 
-        hitpoint -= dmg.damageAmount; 
-        pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
-
-        if (hitpoint <= 0)
+        if (Time.time - lastImmune > immuneTime)
         {
-            hitpoint = 0;
-            Death();
+            
+            lastImmune = Time.time; 
+            hitpoint -= dmg.damageAmount; 
+            pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
+
+            if (hitpoint <= 0)
+            {
+                hitpoint = 0;
+                Death();
+            }
         }
+
     }
 
     protected virtual void Death()
